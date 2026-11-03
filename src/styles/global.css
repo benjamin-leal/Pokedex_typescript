@@ -1,0 +1,122 @@
+/* ===== Tokens ===== */
+:root {
+  --red: #ee1515;
+  --red-dark: #b30f0f;
+  --ink: #212121;
+  --white: #ffffff;
+  --paper: #f4f4f4;
+  --muted: #5c5c5c;
+
+  --radius: 16px;
+  --shadow: 0 10px 30px rgb(0 0 0 / 0.25);
+  --font: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
+
+  --type-normal: #a8a77a;
+  --type-fire: #ee8130;
+  --type-water: #6390f0;
+  --type-electric: #e8b800;
+  --type-grass: #5aa83a;
+  --type-ice: #4fb8b0;
+  --type-fighting: #c22e28;
+  --type-poison: #a33ea1;
+  --type-ground: #b8963f;
+  --type-flying: #8a74d8;
+  --type-psychic: #f95587;
+  --type-bug: #8a9a10;
+  --type-rock: #a08a2c;
+  --type-ghost: #735797;
+  --type-dragon: #6f35fc;
+  --type-dark: #705746;
+  --type-steel: #7a7ab0;
+  --type-fairy: #d685ad;
+}
+
+/* ===== Reset mínimo ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+ul,
+figure {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* ===== Base: gradiente rojo y blanco estilo Pokébola ===== */
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font);
+  color: var(--ink);
+  line-height: 1.5;
+  background-color: var(--white);
+  background-image: linear-gradient(
+    180deg,
+    #ff4a3d 0%,
+    var(--red) 30%,
+    var(--red-dark) 48.5%,
+    var(--ink) 48.5%,
+    var(--ink) 51.5%,
+    var(--white) 51.5%,
+    #e9e9e9 100%
+  );
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
